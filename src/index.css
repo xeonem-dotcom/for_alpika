@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+.petal{ position:absolute; animation: fall linear infinite; opacity:0.85; transform: rotate(10deg); }
+@keyframes fall{ 0%{ transform: translateY(-10vh) rotate(0deg); } 100%{ transform: translateY(120vh) rotate(360deg); } }
