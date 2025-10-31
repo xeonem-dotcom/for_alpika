@@ -1,12 +1,16 @@
 {
   "name": "for_alpika",
   "version": "1.0.0",
+  "homepage": "https://xeonem-dotcom.github.io/for_alpika",
   "private": true,
-  "homepage": "./",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+     "deploy": "gh-pages -d dist"
+
   },
   "dependencies": {
     "framer-motion": "^10.16.4",
@@ -18,6 +22,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.0",
     "autoprefixer": "^10.4.15",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.29",
     "tailwindcss": "^3.3.3",
     "vite": "^5.0.0"
