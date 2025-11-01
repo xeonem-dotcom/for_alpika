@@ -9,6 +9,10 @@ const Gallery = () => {
   `${import.meta.env.BASE_URL}alpika4.jpeg`,
   `${import.meta.env.BASE_URL}alpika5.jpeg`,
   `${import.meta.env.BASE_URL}alpika6.jpeg`,
+  `${import.meta.env.BASE_URL}alpika7.jpg`,
+  `${import.meta.env.BASE_URL}alpika8.jpg`,
+  `${import.meta.env.BASE_URL}alpika9.jpg`,
+  `${import.meta.env.BASE_URL}alpika10.jpg`,
 ];
 
 

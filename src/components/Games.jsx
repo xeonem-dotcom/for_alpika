@@ -7,23 +7,30 @@ const Games = () => {
   const gameAreaRef = useRef(null);
 
   // Spawn new hearts at intervals
-  useEffect(() => {
-    if (gameOver) return;
+ useEffect(() => {
+  if (gameOver) return;
 
-    const spawnInterval = setInterval(() => {
-      setHearts((prev) => [
-        ...prev,
-        {
-          id: Date.now(),
-          x: Math.random() * (window.innerWidth - 50),
-          y: -50,
-          speed: 2 + Math.random() * 3 + score * 0.1, // speed increases with score
-        },
-      ]);
-    }, 1000);
+  const fallInterval = setInterval(() => {
+    setHearts((prev) => {
+      const updated = prev.map((h) => ({
+        ...h,
+        y: h.y + h.speed,
+      }));
 
-    return () => clearInterval(spawnInterval);
-  }, [gameOver, score]);
+      for (let h of updated) {
+        if (h.y >= window.innerHeight - 50) {
+          setGameOver(true);
+          break;
+        }
+      }
+
+      return updated;
+    });
+  }, 30);
+
+  return () => clearInterval(fallInterval);
+}, [gameOver, score]);
+
 
   // Move hearts down
   useEffect(() => {
@@ -40,8 +47,7 @@ const Games = () => {
         for (let h of updated) {
           if (h.y >= window.innerHeight - 50) {
             setGameOver(true);
-            clearInterval(fallInterval);
-            return prev;
+            return updated;
           }
         }
 

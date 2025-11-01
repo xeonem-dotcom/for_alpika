@@ -5,7 +5,7 @@ export default function Home({ setPage }){
       <div className="md:flex md:items-center md:justify-between">
         <div>
           <h1 className="text-5xl font-extrabold text-pink-600">HAPPY BIRTHDAY ALPIKA</h1>
-          <p className="mt-3 text-pink-700">you don't even know how much i adore you</p>
+          <p className="mt-3 text-pink-700">This one, For the prettiest girl i know...</p>
           <div className="mt-6"><button onClick={()=>setPage('wish')} className="px-6 py-3 rounded-full bg-pink-400 text-white">Click me 💗</button></div>
         </div>
         <div className="mt-6 md:mt-0 grid grid-cols-3 gap-2">

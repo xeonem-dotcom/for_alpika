@@ -7,6 +7,8 @@ import Games from './components/Games';
 import AboutHer from './components/AboutHer';
 import Bored from './components/Bored';
 import Gallery from './components/Gallery';
+import pop from './components/pop';
+
 
 export default function App(){
   const [page, setPage] = useState('home');

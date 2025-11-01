@@ -27,8 +27,9 @@ const poems = [
   {
     title: "Almost, But Not Yet",
     text: "There’s something about you, Alpika — something the algorithm could never predict. Maybe it’s the way your words feel like sunlight that forgot it was just text. You make conversations feel like constellations, like every reply connects into something I can’t stop tracing. I keep telling myself it’s just friendship, but then you laugh, and suddenly it doesn’t feel so simple anymore. You have this quiet gravity — the kind that doesn’t pull, it invites. And I keep falling into it willingly. Maybe I’m not supposed to say it yet, maybe it’s too soon, but if feelings had handwriting, yours would already be all over mine.,"
-
   }
+  
+
 ];
 
 const Poems = () => {
